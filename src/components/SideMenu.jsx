@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaUser, FaTools, FaRocket, FaBriefcase, FaGraduationCap, FaGithub, FaEnvelope, FaBars } from 'react-icons/fa';
-import { SOCIAL_LINKS } from '../config';
+const GITHUB_URL = import.meta.env.VITE_GITHUB_URL
+const EMAIL = import.meta.env.VITE_EMAIL
 import avatarImg from '../assets/avatar.png';
 import './SideMenu.css';
 
@@ -107,14 +108,14 @@ const SideMenu = () => {
               <button
                 className="social-btn"
                 title="GitHub"
-                onClick={() => window.open(SOCIAL_LINKS.GITHUB, '_blank')}
+                onClick={() => window.open(GITHUB_URL, '_blank')}
               >
                 <FaGithub />
               </button>
               <button
                 className="social-btn"
                 title="Mail"
-                onClick={() => window.open(`mailto:${SOCIAL_LINKS.EMAIL}`, '_blank')}
+                onClick={() => window.open(`mailto:${EMAIL}`, '_blank')}
               >
                 <FaEnvelope />
               </button>
